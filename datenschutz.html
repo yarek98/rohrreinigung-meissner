@@ -81,9 +81,9 @@ a:hover{color:var(--ink)}
     <a href="/" class="brand" aria-label="Rohrreinigung Meißner – Startseite">
       <img src="logo-rohrreinigung.svg" alt="Rohrreinigung Meißner" style="height:54px;width:auto">
     </a>
-    <a href="tel:+4915792807130" class="head-cta" data-track="phone-header">
+    <a href="tel:+4915792810200" class="head-cta" data-track="phone-header">
       <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-      <span>0157 92807130</span>
+      <span>0157 92810200</span>
     </a>
   </div>
 </header>
@@ -124,8 +124,8 @@ a:hover{color:var(--ink)}
 <p>Inhaber: Stefan Meißner</p>
 <p>Friedrich-Karl-Stra&szlig;e 49</p>
 <p>46045 Oberhausen</p>
-<p>Telefon: <a href="tel:+4915792807130">0157 92807130</a></p>
-<p>E-Mail: <a href="mailto:info@rohrreinigung-meissner.de">info@rohrreinigung-meissner.de</a></p>
+<p>Telefon: <a href="tel:+4915792810200">0157 92810200</a></p>
+<p>E-Mail: <a href="mailto:Info@haustechnik-meißner.de">Info@haustechnik-meißner.de</a></p>
 <p>Website: <a href="https://rohrreinigung-meissner.de">rohrreinigung-meissner.de</a></p>
 </div>
 
@@ -137,8 +137,8 @@ a:hover{color:var(--ink)}
 <div class="callout">
 <p><strong>Stefan Meißner</strong></p>
 <p>Rohrreinigung Meißner</p>
-<p>E-Mail: <a href="mailto:info@rohrreinigung-meissner.de">info@rohrreinigung-meissner.de</a></p>
-<p>Telefon: <a href="tel:+4915792807130">0157 92807130</a></p>
+<p>E-Mail: <a href="mailto:Info@haustechnik-meißner.de">Info@haustechnik-meißner.de</a></p>
+<p>Telefon: <a href="tel:+4915792810200">0157 92810200</a></p>
 </div>
 
 <!-- 3. Hosting -->
@@ -346,8 +346,8 @@ a:hover{color:var(--ink)}
           <strong>Rohrreinigung Meißner</strong>
         </div>
         <p>TÜV-zertifizierter Familienbetrieb für Abfluss-, Rohr- und Kanalreinigung mit 24/7 Notdienst.</p>
-        <p>Tel: <a href="tel:+4915792807130">0157 92807130</a><br>
-        E-Mail: <a href="mailto:info@rohrreinigung-meissner.de">info@rohrreinigung-meissner.de</a></p>
+        <p>Tel: <a href="tel:+4915792810200">0157 92810200</a><br>
+        E-Mail: <a href="mailto:Info@haustechnik-meißner.de">Info@haustechnik-meißner.de</a></p>
       </div>
       <div>
         <h4>Rechtliches</h4>
@@ -375,21 +375,10 @@ a:hover{color:var(--ink)}
 
 <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
 
-<!-- Call-Tracking (DNI) -->
+<!-- Call-Tracking (Plugin: ads_meissner_rohrreinigung) -->
 <script>
 (function(){
-  'use strict';
-  var API='https://ads.auftragsverwaltung.ovh/api/v1/nummernvergabe';
-  var FIRMA_KEY='5VUP0fzl';
-  var API_KEY='bd07ef7e45fc480c9853dabd6ec5d0310c41d04c52373b4c6617373ac4545949';
-  var ORIG='0157 92807130';
-  var ORIG_INT='+4915792807130';
-  var ORIG_CLEAN='015792807130';
-  var CK='_ct_proxy';
-
-  function gp(n){var m=RegExp('[?&]'+n+'=([^&]*)').exec(location.search);return m?decodeURIComponent(m[1]):null}
-  function sid(){var s=sessionStorage.getItem('_ct_sid');if(!s){s=Date.now().toString(36)+Math.random().toString(36).substr(2,8);sessionStorage.setItem('_ct_sid',s);}return s;}
-
+  function gp(n){var m=RegExp('[?&]'+n+'=([^&]*)').exec(location.search);return m?decodeURIComponent(m[1]):''}
   var gclid=gp('gclid')||sessionStorage.getItem('_ct_gclid')||'';
   var gbraid=gp('gbraid')||sessionStorage.getItem('_ct_gbraid')||'';
   var wbraid=gp('wbraid')||sessionStorage.getItem('_ct_wbraid')||'';
@@ -399,47 +388,31 @@ a:hover{color:var(--ink)}
   if(gp('utm_term'))sessionStorage.setItem('utm_term',gp('utm_term'));
   if(gp('utm_campaign'))sessionStorage.setItem('utm_campaign',gp('utm_campaign'));
 
-  function isValidPhone(num){if(!num||typeof num!=='string')return false;var d=num.replace(/\D/g,'');return d.length>=8&&d.length<=15;}
+  window.apCallTracking = {
+    apiUrl: 'https://ads.auftragsverwaltung.ovh/api/v1/nummernvergabe',
+    firmaKey: 'PYmp4DkA',
+    apiKey: '6cfa812c495b27ae952ddf90dfe54f1bedabc6023571f4c8652877939fb854f1',
+    searchNumbers: ['015792810200','+4915792810200','0157 92810200'],
+    defaultPhone: '+4915792810200',
+    defaultPhoneDisplay: '0157 92810200',
+    cookieDays: 30,
+    gclid: gclid,
+    keyword: gp('keyword')||gp('utm_term')||sessionStorage.getItem('utm_term')||'',
+    campaign: gp('campaign')||gp('utm_campaign')||sessionStorage.getItem('utm_campaign')||'',
+    landingPage: location.href
+  };
 
-  var swapped=false;
-  var SKIP={SCRIPT:1,STYLE:1,NOSCRIPT:1,TEXTAREA:1,INPUT:1,IFRAME:1};
-
-  function swap(num){
-    if(!isValidPhone(num))return;
-    var numClean=num.replace(/[\s\-]/g,'');
-    swapped=true;
-    var telLinks=document.querySelectorAll('a[href^="tel:"]');
-    for(var i=0;i<telLinks.length;i++)telLinks[i].setAttribute('href','tel:'+numClean);
-    var phoneEls=document.querySelectorAll('[data-phone]');
-    for(var j=0;j<phoneEls.length;j++)phoneEls[j].textContent=num;
-    if(!document.body)return;
-    var walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{
-      acceptNode:function(node){
-        var p=node.parentNode;
-        if(!p||SKIP[p.nodeName])return NodeFilter.FILTER_REJECT;
-        var v=node.nodeValue;
-        if(v.indexOf(ORIG)!==-1||v.indexOf(ORIG_INT)!==-1||v.indexOf(ORIG_CLEAN)!==-1)return NodeFilter.FILTER_ACCEPT;
-        return NodeFilter.FILTER_REJECT;
-      }
-    },false);
-    while(walker.nextNode()){
-      var t=walker.currentNode;
-      t.nodeValue=t.nodeValue.split(ORIG_INT).join(numClean).split(ORIG_CLEAN).join(numClean).split(ORIG).join(num);
-    }
-    window._dniNumber=num;
-    window._dniClean=numClean;
-    window._dniSwapped=true;
-  }
-
+  function sid(){var s=sessionStorage.getItem('_ct_sid');if(!s){s=Date.now().toString(36)+Math.random().toString(36).substr(2,8);sessionStorage.setItem('_ct_sid',s);}return s;}
   document.addEventListener('click',function(e){
     var link=e.target&&e.target.closest&&e.target.closest('a[href^="tel:"]');
     if(!link)return;
+    var href=(link.getAttribute('href')||'').replace(/^tel:/,'');
     window.dataLayer=window.dataLayer||[];
     window.dataLayer.push({
       event:'phone_conversion',
       conversion_type:'phone_call',
-      phone_number:window._dniNumber||ORIG,
-      is_proxy:!!window._dniSwapped,
+      phone_number:href||'+4915792810200',
+      is_proxy:href!==''&&href!=='+4915792810200'&&href!=='015792810200',
       gclid:gclid,gbraid:gbraid,wbraid:wbraid,
       session_id:sid(),
       click_location:link.getAttribute('data-track')||'unknown',
@@ -447,55 +420,9 @@ a:hover{color:var(--ink)}
       timestamp:new Date().toISOString()
     });
   },true);
-
-  function run(){
-    var cached=sessionStorage.getItem(CK);
-    if(cached&&isValidPhone(cached))swap(cached);
-    var hasAttribution=gclid||gbraid||wbraid||gp('utm_source')||sessionStorage.getItem('utm_term');
-    if(!hasAttribution)return;
-    if(cached)return;
-    var p=new URLSearchParams();
-    if(gclid)p.set('gclid',gclid);
-    if(gbraid)p.set('gbraid',gbraid);
-    if(wbraid)p.set('wbraid',wbraid);
-    var kw=gp('keyword')||gp('utm_term')||sessionStorage.getItem('utm_term')||'';
-    var cp=gp('campaign')||gp('utm_campaign')||sessionStorage.getItem('utm_campaign')||'';
-    if(kw)p.set('keyword',kw);
-    if(cp)p.set('campaign',cp);
-    p.set('landing_page',location.href);
-    p.set('quelle','web');
-    p.set('firma_key',FIRMA_KEY);
-    p.set('api_key',API_KEY);
-    var ctrl=typeof AbortController!=='undefined'?new AbortController():null;
-    var timer=ctrl?setTimeout(function(){ctrl.abort();},3000):null;
-    fetch(API+'?'+p.toString(),{signal:ctrl?ctrl.signal:undefined,headers:{'Accept':'application/json'}}).then(function(r){
-      if(timer)clearTimeout(timer);
-      if(!r.ok)throw new Error(r.status);
-      return r.json();
-    }).then(function(d){
-      var n=d&&(d.nummer||(d.data&&d.data.nummer));
-      if(n&&isValidPhone(n)){sessionStorage.setItem(CK,n);swap(n);}
-    }).catch(function(){});
-  }
-
-  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}else{run();}
-
-  if(typeof MutationObserver!=='undefined'){
-    var moTimer=null;
-    var mo=new MutationObserver(function(){
-      if(!swapped||moTimer)return;
-      moTimer=setTimeout(function(){
-        moTimer=null;
-        var num=sessionStorage.getItem(CK);
-        if(num&&isValidPhone(num))swap(num);
-      },500);
-    });
-    document.addEventListener('DOMContentLoaded',function(){
-      if(document.body)mo.observe(document.body,{childList:true,subtree:true});
-    });
-  }
 })();
 </script>
+<script src="js/call-tracking.js" defer></script>
 
 </body>
 </html>

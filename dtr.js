@@ -16,7 +16,7 @@ var DTR_CONFIG={
   paramName:'keyword',
   titleSearch:'Ihrer Nähe',
   titleTemplate:'Rohrreinigung Notdienst {city} – Heute noch Termin',
-  phone:'0157 92807130'
+  phone:'0157 92810200'
 };
 
 // Region definitions — city key → [displayName, regionId]
@@ -1286,7 +1286,7 @@ function dtrApplyRegion(regionId){
   if(!r)return;
   var block=document.getElementById('dtr-region-block');
   if(block){
-    block.innerHTML='<h2>Niederlassung '+r.name+'</h2><p><strong>Rohrreinigung Meißner – Niederlassung '+r.name+'</strong><br>'+r.address+'<br>Ansprechpartner: Stefan Meißner, Gebietsleiter<br>E-Mail: <a href="mailto:'+r.email+'">'+r.email+'</a><br>Telefon: <a href="tel:+4915792631860">'+DTR_CONFIG.phone+'</a></p>';
+    block.innerHTML='<h2>Niederlassung '+r.name+'</h2><p><strong>Rohrreinigung Meißner – Niederlassung '+r.name+'</strong><br>'+r.address+'<br>Ansprechpartner: Stefan Meißner, Gebietsleiter<br>E-Mail: <a href="mailto:'+r.email+'">'+r.email+'</a><br>Telefon: <a href="tel:+4915792810200">'+DTR_CONFIG.phone+'</a></p>';
     block.style.display='block';
   }
 }
