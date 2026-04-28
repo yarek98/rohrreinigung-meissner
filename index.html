@@ -68,7 +68,13 @@ a{color:var(--blue-dark);text-decoration:none}
 img{max-width:100%;display:block}
 
 /* === TOP STRIP === */
-.strip{background:var(--ink);color:#cbd5e1;font-size:.78rem;text-align:center;padding:8px 0;letter-spacing:.4px}
+.strip{background:var(--ink);color:#cbd5e1;font-size:.78rem;text-align:center;padding:9px 0;letter-spacing:.4px}
+.strip-inner{display:inline-flex;flex-wrap:wrap;align-items:center;gap:10px;justify-content:center;max-width:1180px;padding:0 16px}
+.strip strong{color:#fff;font-weight:700}
+.live-dot{display:inline-block;width:8px;height:8px;background:#22c55e;border-radius:50%;box-shadow:0 0 0 4px rgba(34,197,94,.25);animation:livepulse 1.6s ease-in-out infinite;flex-shrink:0}
+@keyframes livepulse{0%,100%{box-shadow:0 0 0 4px rgba(34,197,94,.25);transform:scale(1)}50%{box-shadow:0 0 0 8px rgba(34,197,94,.05);transform:scale(1.1)}}
+.strip-sep{opacity:.45;user-select:none}
+@media(max-width:520px){.strip{font-size:.72rem;padding:7px 0}.strip-inner{gap:8px}}
 .strip strong{color:var(--yellow);font-weight:700}
 .strip .dot{display:inline-block;width:7px;height:7px;background:#22c55e;border-radius:50%;margin-right:8px;vertical-align:middle;animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
@@ -395,6 +401,28 @@ img{max-width:100%;display:block}
 </style>
 </head>
 <body>
+
+<!-- LIVE STRIP -->
+<div class="strip" role="status" aria-live="polite">
+  <div class="strip-inner">
+    <span class="live-dot" aria-hidden="true"></span>
+    <strong>Monteur jetzt aktiv</strong>
+    <span class="strip-sep">·</span>
+    <span>Heute <strong id="liveDay">…</strong>, <span id="liveDate">…</span></span>
+    <span class="strip-sep">·</span>
+    <span>24/7 erreichbar</span>
+  </div>
+</div>
+<script>
+(function(){
+  var days=['Sonntag','Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag'];
+  var d=new Date();
+  var elDay=document.getElementById('liveDay');
+  var elDate=document.getElementById('liveDate');
+  if(elDay)elDay.textContent=days[d.getDay()];
+  if(elDate)elDate.textContent=('0'+d.getDate()).slice(-2)+'.'+('0'+(d.getMonth()+1)).slice(-2)+'.';
+})();
+</script>
 
 <!-- HEADER -->
 <header class="head">
