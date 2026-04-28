@@ -71,8 +71,6 @@ img{max-width:100%;display:block}
 .strip{background:var(--ink);color:#cbd5e1;font-size:.78rem;text-align:center;padding:9px 0;letter-spacing:.4px}
 .strip-inner{display:inline-flex;flex-wrap:wrap;align-items:center;gap:10px;justify-content:center;max-width:1180px;padding:0 16px}
 .strip strong{color:#fff;font-weight:700}
-.live-dot{display:inline-block;width:8px;height:8px;background:#22c55e;border-radius:50%;box-shadow:0 0 0 4px rgba(34,197,94,.25);animation:livepulse 1.6s ease-in-out infinite;flex-shrink:0}
-@keyframes livepulse{0%,100%{box-shadow:0 0 0 4px rgba(34,197,94,.25);transform:scale(1)}50%{box-shadow:0 0 0 8px rgba(34,197,94,.05);transform:scale(1.1)}}
 .strip-sep{opacity:.45;user-select:none}
 @media(max-width:520px){.strip{font-size:.72rem;padding:7px 0}.strip-inner{gap:8px}}
 .strip strong{color:var(--yellow);font-weight:700}
@@ -405,7 +403,6 @@ img{max-width:100%;display:block}
 <!-- LIVE STRIP -->
 <div class="strip" role="status" aria-live="polite">
   <div class="strip-inner">
-    <span class="live-dot" aria-hidden="true"></span>
     <strong>Monteur jetzt aktiv</strong>
     <span class="strip-sep">·</span>
     <span>Heute <strong id="liveDay">…</strong>, <span id="liveDate">…</span></span>
