@@ -82,10 +82,15 @@ img{max-width:100%;display:block}
 .head .wrap{display:flex;align-items:center;justify-content:space-between;height:120px}
 .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.05rem;letter-spacing:-.3px;color:var(--ink)}
 .brand-logo{display:block;height:40px;width:auto;max-width:60vw}
-.head-cta{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:var(--white);font-weight:700;padding:11px 18px;border-radius:var(--r);font-size:.92rem;transition:background .2s}
+.head-cta{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:var(--white);font-weight:700;padding:11px 18px;border-radius:var(--r);font-size:.92rem;transition:background .2s;white-space:nowrap;flex-shrink:0}
 .head-cta:hover{background:var(--blue-dark);color:var(--white)}
-.head-cta svg{width:16px;height:16px;fill:var(--yellow)}
-@media(max-width:520px){.head .wrap{height:56px}.brand-logo{height:28px}.head-cta{padding:9px 12px;font-size:.82rem}}
+.head-cta svg{width:16px;height:16px;fill:var(--yellow);flex-shrink:0}
+.head-cta-short{display:none}
+.head .wrap{gap:12px}
+.brand{min-width:0}
+@media(max-width:520px){.head .wrap{height:56px}.brand-logo{height:28px}.head-cta{padding:9px 12px;font-size:.82rem;gap:6px}}
+@media(max-width:400px){.head-cta-num{display:none}.head-cta-short{display:inline}.head-cta{padding:9px 12px;gap:6px}}
+@media(max-width:340px){.head-cta-short{display:none}.head-cta{padding:9px 11px}.head-cta svg{width:18px;height:18px}}
 
 /* === HERO === */
 .hero{background:#fff;color:var(--ink);position:relative;overflow:hidden;padding:96px 0 104px;border-bottom:1px solid #eef0f4}
@@ -427,9 +432,10 @@ img{max-width:100%;display:block}
     <a href="/" class="brand" aria-label="Rohrreinigung Meißner – Startseite">
       <img class="brand-logo" src="logo-rohrreinigung.png" alt="Rohrreinigung Meißner" width="1225" height="178" fetchpriority="high">
     </a>
-    <a href="tel:+4915792810200" class="head-cta" data-track="phone-header">
+    <a href="tel:+4915792810200" class="head-cta" data-track="phone-header" aria-label="Anrufen 0157 92810200">
       <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-      0157 92810200
+      <span class="head-cta-num">0157 92810200</span>
+      <span class="head-cta-short">Anrufen</span>
     </a>
   </div>
 </header>
